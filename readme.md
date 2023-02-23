@@ -3,6 +3,8 @@
 ## Description
 This is a small project to find the location of a photo using the [Unsplash API](https://unsplash.com/developers) and the [Position Stack API](https://positionstack.com/).
 
+Try your skills in game: [https://hugolevet.fr/p/where-is-it/](https://hugolevet.fr/p/where-is-it/)
+
 ### Why?
 This game has been made for the [contest #4](https://www.youtube.com/watch?v=9tSYNQJn6c8) of [Le Designer du Web](https://www.youtube.com/@LeDesignerduWeb).  The goal was to create a game using a REST API in a web creation.
 
