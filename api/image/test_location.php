@@ -35,7 +35,7 @@ if (count($locationData['data']) == 0) {
 
 $lat = $locationData['data'][0]['latitude'];
 $lon = $locationData['data'][0]['longitude'];
-$name = $locationData['data'][0]['name'];
+$name = explode(',', $locationData['data'][0]['name'])[0];
 
 // get data from id received
 $file = __DIR__ . '/../../data_from_api/' . $id . '.json';
@@ -47,6 +47,7 @@ if (!file_exists($file)) {
 $data = json_decode(file_get_contents($file), true);
 
 $imageLocations = $data['location'];
+$imageLocations['name'] = explode(',', $imageLocations['name'])[0];
 
 // get distance between image location and user location
 function distance($lat1, $lon1, $lat2, $lon2)
@@ -85,6 +86,7 @@ function orientation($lat1, $lon1, $lat2, $lon2)
 $orientation = orientation($lat, $lon, $imageLocations['position']['latitude'], $imageLocations['position']['longitude']);
 
 $isWin = false;
+
 if ($distance < 1500 || strtolower($name) == strtolower($imageLocations['name']) || strtolower($name) == strtolower($imageLocations['city'])) {
     $isWin = true;
 }
