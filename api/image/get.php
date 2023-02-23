@@ -36,7 +36,12 @@ if ($dataImage !== null && ($dataImage['location']['name'] === null || $dataImag
 if ($dataImage === null) {
     // get image already saved
     $files = scandir(__DIR__ . '/../../data_from_api/');
-    $file = __DIR__ . '/../../data_from_api/' . $files[random_int(2, count($files) - 1)];
+    // keep only json files
+    $files = array_filter($files, function ($file) {
+        return strpos($file, '.json') !== false;
+    });
+    $files = array_values($files);
+    $file = __DIR__ . '/../../data_from_api/' . $files[random_int(0, count($files) - 1)];
     $dataImage = json_decode(file_get_contents($file), true);
 }
 
