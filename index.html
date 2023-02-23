@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where is it?</title>
+    <link rel="stylesheet" href="style.min.css">
+</head>
+
+<body>
+    <div class="image-container loading">
+        <div class="card">
+            <img src="temp.jpg" alt="image 1" class="image" id="image">
+            <p id="credit">
+                Photo by
+                <a class="author" href="https://unsplash.com/es/@danborn" rel="noopener noreferrer"
+                    target="_blank">Daniel
+                    Born</a>
+                on
+                <a class="source" href="https://unsplash.com/fr/photos/6XS0j1ledgg" rel="noopener noreferrer"
+                    target="_blank">Unsplash</a>
+                but where is it?
+            </p>
+            <div id="modal" class="hidden">
+                <div class="content">
+                    test
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="game-container">
+        <form class="input-container" id="new-location">
+            <input type="search" placeholder="Do you have any idea where is it?" id="location">
+            <button>Find</button>
+        </form>
+        <button onclick="startNewGame()" id="start-new-game">Start a new game</button>
+        <div id="results-container"></div>
+    </div>
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+
+</html>
