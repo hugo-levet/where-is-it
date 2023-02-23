@@ -78,6 +78,7 @@ function orientation($lat1, $lon1, $lat2, $lon2)
     $brng = rad2deg(atan2($y, $x));
     $brng = (round($brng) + 360) % 360;
     $brng = 360 - $brng; // count degrees counter-clockwise - remove to make clockwise
+    $brng = ($brng + 180) % 360; // convert to compass bearing (0°...360°)
     return $brng;
 }
 

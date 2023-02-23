@@ -2,7 +2,7 @@ function getCompas(orientation) {
     const svg = '<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">' +
         '   <g id="compas">' +
         '       <circle id="circle" cx="20" cy="20" r="19" stroke="black" stroke-width="2"/>' +
-        '       <g id="needle" transform="rotate(' + (orientation - 90) + ' 20 20)">' +
+        '       <g id="needle" transform="rotate(' + (orientation) + ' 20 20)">' +
         '           <path id="red" d="M20.5083 17.6584L29.9536 20.0332L20.502 22.4089L20.5083 17.6584Z" fill="#FF0000" stroke="#FF0000" stroke-linejoin="round"/>' +
         '           <path id="black" d="M19.5008 22.4416L10.0555 20.0667L19.5071 17.6911L19.5008 22.4416Z" stroke="black" stroke-linejoin="round"/>' +
         '       </g>' +
