@@ -26,3 +26,5 @@ define('UNSPLASH_CLIENT_ID', '{your unsplash client id}');
 define('POSITION_STACK_ACCESS_KEY', '{your position stack access key}');
 ```
 Start the server with `php -S localhost:8000` and open the index.html file in your browser.
+
+Don't forget to allow permission to write in *data_from_api* folder to php.
